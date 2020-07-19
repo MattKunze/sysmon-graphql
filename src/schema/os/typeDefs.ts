@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro"
 
-const typeDefs = gql`
+export default gql`
   type HostInfo {
     arch: String!
     hostname: String!
@@ -15,5 +15,3 @@ const typeDefs = gql`
     hostInfo: HostInfo!
   }
 `
-
-export default typeDefs
