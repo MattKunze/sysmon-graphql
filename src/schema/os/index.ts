@@ -1,6 +1,9 @@
-import { makeExecutableSchema } from "apollo-server-micro"
+import { buildSchema } from "type-graphql"
 
-import resolvers from "./resolvers"
-import typeDefs from "./typeDefs"
+import { HostInfoResolver } from "./hostInfo"
+import { LoadAverageResolver } from "./loadAverage"
+import { MemoryInfoResolver } from "./memoryInfo"
 
-export default makeExecutableSchema({ typeDefs, resolvers })
+export default buildSchema({
+  resolvers: [HostInfoResolver, LoadAverageResolver, MemoryInfoResolver],
+})

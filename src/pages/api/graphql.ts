@@ -1,10 +1,9 @@
 import { ApolloServer } from "apollo-server-micro"
+import { NextApiRequest, NextApiResponse } from "next"
+import memoize from "promise-memoize"
+import "reflect-metadata"
 
-import schema from "schema"
-
-const apolloServer = new ApolloServer({
-  schema,
-})
+import buildSchema from "schema"
 
 export const config = {
   api: {
@@ -12,4 +11,18 @@ export const config = {
   },
 }
 
-export default apolloServer.createHandler({ path: "/api/graphql" })
+async function apolloHandler() {
+  const apolloServer = new ApolloServer({
+    schema: await buildSchema(),
+  })
+
+  return apolloServer.createHandler({ path: "/api/graphql" })
+}
+const memoizedHandler = memoize(apolloHandler)
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  return (await memoizedHandler())(req, res)
+}
