@@ -1166,6 +1166,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/file-size@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/file-size/-/file-size-1.0.0.tgz#bbca9daff65f1757c2601f3f183be55cc2576306"
+  integrity sha512-pyEr4vgukOemradM4/sRHqTaatUiDvJ14EkXp4AhwR9N9j4RO0WfQZ+eIuDUpzuGnvY0JoPpZTIlYFwaaxjgew==
+
 "@types/fs-capacitor@*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/fs-capacitor/-/fs-capacitor-2.0.0.tgz#17113e25817f584f58100fb7a08eed288b81956e"
@@ -3116,6 +3121,11 @@ figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
   integrity sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==
+
+file-size@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/file-size/-/file-size-1.0.0.tgz#3338267d5d206bbf60f4df60c19d7ed3813a4657"
+  integrity sha1-MzgmfV0ga79g9N9gwZ1+04E6Rlc=
 
 file-uri-to-path@1.0.0:
   version "1.0.0"
