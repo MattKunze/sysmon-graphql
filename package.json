@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "apollo-server-micro": "^2.16.0",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "file-size": "^1.0.0",
     "graphql": "^15.3.0",
     "next": "9.4.4",
